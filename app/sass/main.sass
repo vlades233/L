@@ -1,0 +1,452 @@
+@import "bourbon"
+@import "vars"
+@import "libs"
+@import "animation"
+
+section.features
+  padding: 120px 0
+  text-align: center
+  h2
+    text-align: center
+    font-size: 50px
+    margin-bottom: 85px
+  .icon
+    background-color: $accent
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 48px
+    width: 130px
+    height: 130px
+    color: $default-color
+    transform: rotate(45deg)
+    i
+      transform: rotate(-45deg)
+  .item
+    display: flex
+    flex-direction: column
+    max-width: 375px
+    width: 100%
+    align-items: center
+    h3
+      font-size: 25px
+      margin-top: 60px
+      margin-bottom: 0
+  &.light
+    h3
+      margin-top: 20px
+    .icon
+      transform: none
+      background-color: transparent
+      color: $accent
+      width: auto
+      height: auto
+      i
+        transform: none
+section.about
+  background-color: #f8f4f1
+  .image
+    max-width: 50%
+    width: 100%
+    background-repeat: no-repeat
+    background-size: cover
+  .text
+    max-width: 50%
+    width: 100%
+    padding: 110px 150px
+section.partner
+  .portrait
+    max-width: 50%
+    width: 100%
+    background-size: contain
+    background-position: bottom center
+    background-repeat: no-repeat
+  .text
+    max-width: 50%
+    width: 100%
+    padding: 150px 0
+  .socials
+    padding-left: 0
+    li
+      margin-right: 15px
+    a
+      width: 35px
+      height: 35px
+      display: flex
+      align-items: center
+      justify-content: center
+      background-color: $accent
+      border-radius: 50px
+      &:hover
+        background-color: #ffffff
+section.steps
+  li
+    border-top: none !important
+    max-width: 560px
+    margin: auto
+    padding-left: 0 !important
+section.our_team
+  h2
+    text-align: center
+  .portrait
+    min-width: 155px
+    height: 155px
+    border-radius: 200px
+    background-size: cover
+    background-position: center
+    display: block
+  li
+    flex-direction: row
+    padding: 50px 0
+    padding-left: 120px
+    p
+      font-family: "Raleway", sans-serif
+      font-size: 17px
+      color: #988a8a
+    h3
+      font-size: 25px
+    .portrait
+      margin-right: 25px
+    .icon
+      margin-right: 60px
+    &:nth-child(2n)
+      flex-direction: row-reverse
+      padding-left: 0px
+      padding-right: 120px
+      .portrait
+        margin-right: 0
+        margin-left: 25px
+      .icon
+        margin-right: 0
+        margin-left: 60px
+    &+li
+      border-top: 1px #f8f4f1 solid
+    .icon
+      font-family: $bold-font
+      font-size: 48px
+      color: #ffffff
+      transform: rotate(45deg)
+      background-color: $accent
+      display: flex
+      align-items: center
+      justify-content: center
+      min-width: 130px
+      max-width: 130px
+      height: 130px
+
+.gallery_carousel
+  .item
+    width: 370px
+    margin: auto
+    height: 275px
+
+.owl-carousel .owl-nav.disabled
+  display: block !important
+  &>*
+    position: absolute
+    top: 50%
+    background-color: $accent!important
+    display: flex
+    color: #ffffff!important
+    font-size: 30px
+    align-items: center
+    justify-content: center
+    min-width: 35px
+    height: 35px
+    border-radius: 50px
+    &.owl-prev
+      left: -50px
+    &.owl-next
+      right: -50px
+    i
+      z-index: 1
+      position: absolute
+      display: flex
+      align-items: center
+      justify-content: center
+
+.our_team
+  counter-reset: heading /* Инициируем счетчик */
+
+.our_team .icon:before
+  counter-increment: heading /* Указываем идентификатор счетчика */
+  content: counter(heading) /* Выводим текст перед содержимым тега <h2> */
+  transform: rotate(-45deg)
+
+iframe
+  width: 100%
+
+section.answer
+  li
+    .body
+      overflow: hidden
+      transition: all .5s ease
+
+section.subscribe
+  padding: 90px 0
+  background-position: center top
+  background-repeat: no-repeat
+  background-size: cover
+  h2
+    text-align: center
+    font-size: 40px
+    color: #ffffff
+    margin-bottom: 50px
+  .container
+    display: flex
+    flex-direction: column
+    align-items: center
+    input
+      width: 100%
+      height: 65px
+      padding: 30px
+      padding-left: 75px
+      border: none
+      background-color: rgba(#fff,.5)
+    .inp_wrap
+      position: relative
+      max-width: 976px
+      width: 100%
+      margin-bottom: 30px
+      &::before
+        content: "Email:"
+        position: absolute
+        top: 50%
+        left: 30px
+        transform: translateY(-50%)
+  *
+    display: block
+
+section.carousel
+  padding: 90px 0
+  h2
+    text-align: center
+
+section.partners
+  .p_list
+    flex-wrap: wrap
+    justify-content: space-between
+    li
+      margin: 20px 50px
+      max-width: 440px
+      width: 100%
+      display: flex
+      align-items: center
+      justify-content: space-between
+      p
+        font-family: "Raleway", sans-serif
+        font-size: 17px
+        color: #988a8a
+      .image
+        max-width: 120px
+        height: 90px
+        width: 100%
+        margin-right: 20px
+        background-position: center
+        background-size: contain
+        background-repeat: no-repeat
+
+section.testimonials
+  .item
+    max-width: 560px
+    width: 100%
+
+section.numbers
+  .wrapper
+    justify-content: space-around
+    text-align: center
+    .number
+      font-size: 60px
+      color: $accent
+    .text
+      font-size: 20px
+
+section.numbers_sec
+  color: #ffffff
+  padding: 45px 0 90px
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+  .wrapper
+    justify-content: center
+    text-align: center
+    .item
+      margin: 0 15px
+      &+.item
+        position: relative
+        &::before
+          content: ":"
+          font-family: "DroidSerifBold", sans-serif
+          position: absolute
+          left: -15px
+          top: 50%
+          transform: translateY(-50%)
+          font-size: 20px
+    .number
+      color: #ffffff
+      background-color: rgba($accent,.5)
+      font-size: 60px
+      height: 150px
+      width: 150px
+      display: flex
+      align-items: center
+      justify-content: center
+      border-radius: 200px
+    .text
+      font-size: 20px
+
+section.pricing
+  .wrapper
+    .item
+      text-align: center
+      padding-bottom: 40px
+      border: 1px solid $accent
+      max-width: 370px
+      width: 100%
+      margin: 0 15px
+      position: relative
+      &::before
+        content: ""
+        width: 135px
+        height: 135px
+        display: block
+        position: absolute
+        left: 50%
+        top: 50%
+        border: 1px solid $accent
+        transform: rotate(45deg) translateY(10%) translateX(-60%)
+        opacity: 0
+        transition: all .5s ease
+      &:hover
+        &::before
+          opacity: .4
+      ul
+        color: #988a8a
+        padding-left: 0
+        max-width: 230px
+        width: 100%
+        margin: 20px auto 0
+        li
+          padding: 25px 0
+          &+li
+            border-top: 1px solid #988a8a
+      .title
+        background-color: $accent
+        color: #ffffff
+        padding: 20px 0
+
+section.answer
+  .icon
+    background-color: $accent
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 48px
+    width: 130px
+    height: 130px
+    color: $default-color
+    transform: rotate(45deg)
+    margin: auto
+    .inner
+      transform: rotate(-45deg)
+  .title
+    font-size: 25px
+    font-family: "DroidSerifBold", sans-serif
+    border-bottom: 1px solid #bab5b5
+    display: flex
+    justify-content: space-between
+    padding: 20px 0
+    cursor: pointer
+
+    &::after
+      content: "\f078"
+      transition: all .5s ease
+      font-family: FontAwesome, sans-serif
+  .body
+    margin-top: 0
+    transition: all .5s ease
+  .expand
+    .title::after
+      transform: rotate(180deg)
+    .body
+      margin-top: 20px
+
+footer
+  background-color: #1f1d1d
+  color: #ffffff
+  .container>.wrapper
+    justify-content: space-between
+    &>*
+      margin: 15px
+  .logo
+    max-width: 340px
+    a
+      max-width: 170px
+      display: inline-block
+  .subscribe
+    display: flex
+    flex-direction: column
+    .title
+      font-size: 20px
+      margin-bottom: 40px
+    input
+      margin-bottom: 40px
+    a
+      &::after
+        content: ">"
+        margin-left: 10px
+        color: $accent
+  .socials_list
+    .title
+      font-size: 20px
+      margin-bottom: 40px
+  input
+    border: none
+    padding: 10px 30px
+.footerline
+  text-align: center
+  font-size: 15px
+  background-color: #2e2c2c
+  color: #988a8a
+.cross
+  display: none
+.btn-mn
+  z-index: 2
+  height: 50px
+  position: sticky
+  top: 0
+  display: none
+  background-color: #2e2c2c
+  button
+    font-size: 30px
+    background-color: transparent
+    color: #ffffff
+    border: none
+
+section.testimonials
+  background-color: #f8f4f1
+.testimonials_carousel
+  .image
+    width: 150px
+    height: 150px
+    background-position: center top
+    border-radius: 200px
+    background-size: cover
+  .text
+    font-family: "Raleway", sans-serif
+    font-size: 17px
+    color: #988a8a
+  .name
+    font-family: "DroidSerifBold", sans-serif
+    font-size: 20px
+  .owl-dots
+    .owl-dot
+      border: 1px solid $accent
+      height: 17px
+      width: 17px
+      border-radius: 20px
+      margin-right: 30px
+      transition: all .5s ease
+      &.active
+        background-color: $accent
+@import "media"

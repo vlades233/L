@@ -1,0 +1,150 @@
+@import "bourbon"
+@import "vars"
+
+*::-webkit-input-placeholder
+  color: #666
+  opacity: 1
+
+*:-moz-placeholder
+  color: #666
+  opacity: 1
+
+*::-moz-placeholder
+  color: #666
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: #666
+  opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: #666
+body input:required:valid,
+body textarea:required:valid
+  color: #666
+
+html
+  min-height: 100%
+  display: flex
+  flex-direction: column
+
+body
+  flex: auto
+  font-size: 16px
+  line-height: 1.3
+  min-width: 320px
+  position: relative
+  font-family: $default-font
+  overflow-x: hidden
+  color: $default-font-color
+  display: flex !important
+  flex-direction: column
+  justify-content: flex-start
+  margin: 0
+  background-color: #fff
+
+header
+  min-height: 100vh
+
+main
+  flex-grow: 1
+  overflow-x: hidden
+
+*
+  box-sizing: border-box
+  outline: none
+
+a
+  text-decoration: none
+  transition: all .5s ease
+  color: $default-color
+  &:hover
+    color: $accent
+  &:active,:focus
+    color: darken($accent, 10%)
+  &:hover,:active,:focus,:visited
+    outline: none
+
+input
+  outline: none
+
+section
+  position: relative
+
+label
+  display: block
+  width: 100%
+
+img
+  width: 100%
+  height: auto
+  display: block
+
+li
+  list-style-type: none
+
+h1,h2,h3,h4,h5,h6
+  font-family: $bold-font
+h2
+  font-size: 50px
+  text-align: center
+i
+  font-size: inherit
+
+//BUTTON DEFAULT STYLES
+.button
+  cursor: pointer
+  background-color: #fff
+  padding: 20px 60px
+  color: #333333
+  display: inline-block
+  white-space: nowrap
+  &:hover
+    background-color: $accent
+    color: #ffffff
+  &:active,:focus
+    background-color: darken($accent, 10%)
+  .dark
+    background-color: $accent
+.sect_title
+  font-family: $default-font
+
+.container
+  max-width: 1170px
+  margin: 0 auto
+  padding: 15px
+  width: 100%
+
+.column
+  flex-direction: column
+.wrapper
+  display: flex
+
+.hidden
+  display: none
+
+.price
+  font-family: "DroidSerifBold"
+  color: $accent
+  font-size: 36px
+  &::before
+    content: "$"
+    font-size: 24px
+
+ul
+  padding-left: 0
+.socials
+  padding-left: 0
+  li
+    margin-right: 15px
+  a
+    width: 35px
+    height: 35px
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: $accent
+    border-radius: 50px
+    &:hover
+      background-color: #ffffff
